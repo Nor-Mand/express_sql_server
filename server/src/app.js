@@ -1,10 +1,13 @@
 import express from 'express'
 import config from './config'
+import contactsRoutes from "./routes/contactsRoutes";
 
 const app = express()
-let port = 5000;
+
+
 // Settings
 app.set('port', config.port)
-app.set('port', config.port)
+
+app.use(contactsRoutes)
 
 export default app
